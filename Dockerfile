@@ -7,7 +7,7 @@ RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 36F08F83ADA8FD6F \
 	&& echo "deb http://ppa.launchpad.net/inizan-yannick/mono/ubuntu vivid main " > /etc/apt/sources.list.d/mono-ppa.list \
 	&& apt-get update \
-	&& apt-get install -y curl unzip mono-devel nuget autoconf automake build-essential libtool \
+	&& apt-get install -y curl unzip mono-runtime nuget autoconf automake build-essential libtool \
 	&& rm -rf /var/lib/apt/lists/*
 
 RUN mozroots --import --sync
